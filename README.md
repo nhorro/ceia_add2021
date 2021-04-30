@@ -1,17 +1,17 @@
 # Análisis de Datos 2021
-Repositorio de materia Análisis de Datos de la Carrera de Especialización en Inteligencia Artifical de FIUBA.
+Repositorio de materia Análisis de Datos de la Carrera de Especialización en Inteligencia Artificial de FIUBA.
 
 ## Clase 1. Introducción al análisis de datos y herramientas
 
-- Temas:
+- Temario:
   - Introducción al análisis de datos (presentación).
-  - Repaso de herramientas de SW (hands On).
-    - GIT. Modelo de datos. Comandos útiles.
-    - Conda. Manejo de ambientes virtuales. Gestión de paquetes.
-    - Python con conceptos de Ingeniería de SW.
-    - Numpy (opcional).
-    - Pandas.
-  - Resolución de TP1 en clase.
+  - Taller de nivelación de herramientas de SW (hands On).
+    - GIT. Modelo de datos. Comandos útiles (presentación/jamboard).
+    - Conda. Manejo de ambientes virtuales. Gestión de paquetes (sesión interactiva).
+    - Python con conceptos de Ingeniería de SW (sesión interactiva).
+    - Numpy (sesión interactiva, opcional).
+    - Pandas (sesión interactiva).
+  - Resolución de TP1 en clase  (sesión interactiva).
 
 - Ejercicios
   - [Trabajo Práctico 1. Introducción al Análisis de Datos](clase1/ejercicios/tp01.ipynb)

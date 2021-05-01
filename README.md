@@ -1,7 +1,9 @@
 # Análisis de Datos 2021
 Repositorio de materia Análisis de Datos de la Carrera de Especialización en Inteligencia Artificial de FIUBA.
 
-## Clase 1. Introducción al análisis de datos y herramientas
+## Clases
+
+### Clase 1. Introducción al análisis de datos y herramientas
 
 - Temario:
   - Introducción al análisis de datos ([presentación](https://docs.google.com/presentation/d/1ueVJFZhFfCrCpmn_oiEaQN_4udnTxf4mIYgEb866zWU/edit?usp=sharing)).
@@ -16,3 +18,4 @@ Repositorio de materia Análisis de Datos de la Carrera de Especialización en I
 - Ejercicios
   - [Trabajo Práctico 1. Introducción al Análisis de Datos](clase1/ejercicios/tp01.ipynb)
   - [Link de descarga de datos](https://drive.google.com/file/d/1eEZCnCuGKU2LFKrWaC0Tr8LwgxrZLqCk/view?usp=sharing)
+

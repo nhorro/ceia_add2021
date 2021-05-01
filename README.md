@@ -4,7 +4,7 @@ Repositorio de materia Análisis de Datos de la Carrera de Especialización en I
 ## Clase 1. Introducción al análisis de datos y herramientas
 
 - Temario:
-  - Introducción al análisis de datos (presentación).
+  - Introducción al análisis de datos ([presentación](https://docs.google.com/presentation/d/1ueVJFZhFfCrCpmn_oiEaQN_4udnTxf4mIYgEb866zWU/edit?usp=sharing)).
   - Taller de nivelación de herramientas de SW (hands On).
     - GIT. Modelo de datos. Comandos útiles (presentación/jamboard).
     - Conda. Manejo de ambientes virtuales. Gestión de paquetes (sesión interactiva).

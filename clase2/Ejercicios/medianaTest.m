@@ -1,0 +1,1 @@
+pkg load statisticsrand ("seed", 1234)% numero de muestrasN = 10000;% vector aleatorio normal N(1,1)X = 1+randn(N,1);% calculo la medianamediana_X = mediana(X)

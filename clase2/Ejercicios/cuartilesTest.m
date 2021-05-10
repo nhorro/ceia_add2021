@@ -1,0 +1,1 @@
+pkg load statisticsrand ("seed", 1234)% numero de muestrasN = 10000;% vector aleatorio normal N(1,1)X = 1+randn(N,1);% calculo los cuartilescuartiles_X = cuartiles(X)% comparo con paquetes de octave octave_Q1 = quantile(X, 0.25) octave_Q2 =quantile(X, 0.5) octave_Q3 =quantile(X, 0.75)  IQR = cuartiles_X(3) - cuartiles_X(1)

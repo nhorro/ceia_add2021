@@ -88,7 +88,7 @@ Temario:
 Docente: Lic. Nicolás Eduardo Horro.
 
 - Temario:
-  - Introducción al análisis de datos ([presentación - parte 1](clase4/Apuntes/Clase 4. Preparación de datos - Parte1.pdf)).
+  - Introducción al análisis de datos ([presentación - parte 1](./clase4/Apuntes/Clase 4. Preparación de datos - Parte1.pdf)).
   - Taller de preparación de datos.
     - Introducción a la preparación de datos.
     - Caracterización de las variables.

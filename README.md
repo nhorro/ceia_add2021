@@ -100,3 +100,46 @@ Docente: Lic. Nicolás Eduardo Horro.
     - Escalado de variables de entrada (feature scaling).
     - Integración de las técnicas anteriores en cadenas de procesamiento con SKLearn.
   - Presentación de trabajo integrador.
+
+### Clase 5. Selección de features
+
+Docente: Dra. Magdalena Bouza
+
+Temario:
+
+- Métodos de selección de features. [Presentación]("./clase5/Apuntes/05 - Selección de features.pdf").
+  - Métodos de filtrado
+    - Coeficiente de correlación de Pearson.
+    - Coeficiente de Spearman
+    - Información mutua
+    - ANOVA
+    - Coeficiente de correlación de Kendall
+    - Kruskall-Wallis / Información mutua
+    - Test de $\Chi^2$
+  - Métodos embebidos
+  - Métodos wrapper
+  - Embedded
+- [Ejemplos](clase_5/Ejemplos)
+
+### Clase 6. Reducción de dimensiones
+
+Docente: Dra. Magdalena Bouza
+
+Temario:
+
+- Métodos de reducción de dimensiones. [Presentación]("./clase6/Apuntes/06 - Reducción de dimensiones.pdf").
+  - Análisis de componentes principales (PCA)
+  - Descomposición de valores singulares (SVD)
+- [Ejemplos](clase_6/Ejemplos)
+
+### Clase 7. Taller de ingeniería de features y despliegue de modelos. 
+
+Docentes: Dra. Magdalena Bouza, Lic. Nicolás Eduardo Horro.
+
+Temario:
+
+- Caso de estudio.
+- Desarrollo y despliegue de un modelo.
+
+### Clase 8. Evaluación / exposición de trabajos
+

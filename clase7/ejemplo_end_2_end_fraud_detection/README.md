@@ -1,4 +1,4 @@
-# Ejemplo de despliegue con codcker
+# Ejemplo de despliegue con docker
 
 Ejemplo de despliegue de ML con docker.
 

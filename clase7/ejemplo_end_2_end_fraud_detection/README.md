@@ -1,24 +1,17 @@
-# Trabajo Final Integrador de Aprendizaje Automático II
+# Ejemplo de despliegue con codcker
 
-Este trabajo es la continuación del [Trabajo Final Integrador de Machine Learning 1](https://github.com/nhorro/ceai2020/tree/master/machine_learning_1/trabajo_integrador).
+Ejemplo de despliegue de ML con docker.
 
 ![concept](doc/assets/concept.png)
 
-Cambios principales respecto a la versión anterior: 
-
 - **Arquitectura de microservicios**: 
-  - Se eliminan ElasticSearch, Kibana y Portainer para poner el foco sólo en el aspecto de detección de anomalías (en este caso fraude).
-  - Se agrega una cadena de procesamiento de detección de anomalías en tiempo real utilizando:
+  - Cadena de procesamiento de detección de anomalías en tiempo real utilizando:
     - Generador de datos. Por no disponer de datos reales, en este caso es un "mock" que publica muestras del test set elegidas aleatoriamente (actualizando la fecha de cada nueva muestra generada a la hora actual).
     - El servicio Kapacitor como sistema de monitoreo y alerta en tiempo real configurado para comunicarse con UDF (User Defined Functions) por medio de sockets.
     - Un servicio que utilizando el agente de UDF de Kapacitor invoca a un servicio REST de clasificación con los datos recibidos de Kapacitor.
     - Un servicio REST para utilizar un clasificador de SKLearn (presente en trabajo anterior)
-  - Se incorpora Cronograf como administrador de tareas de Kapacitor.
-- **Manejo de datos imbalanceados**: se aplican técnicas de [SMOTE: Synthetic Minority Over-sampling Technique](https://arxiv.org/pdf/1106.1813.pdf) utilizando la librería [imbalanced-learn](https://imbalanced-learn.org) para mejorar el tratamiento de los datos imbalanceados.
-- **Hyperparameter Tuning**: 
-  - Se reemplaza el mecanismo ad-hoc de búsqueda de parámetros con librerías Hyperopt y Optuna.
-- **Modelos de Ensamble**: 
-  - Se incorporan modelos de ensamble que utilizan distintas técnicas: Bagging, Boosting y Stacking.
+  - Cronograf como administrador de tareas de Kapacitor.
+  - Jupyter para análisis y prototipado rápido.
 
 ## Contenido
 
@@ -26,7 +19,7 @@ Cambios principales respecto a la versión anterior:
 
 ## Descripción general y alcance
 
-Este trabajo propone una solución sencilla de un ambiente autocontenido para prototipado de modelos de Machine Learning en lenguaje Python basada en microservicios con docker-compose.  El foco está en poder ejercitar el proceso completo desde el desarrollo de modelos hasta su puesta en producción con fines didácticos, de prueba de concepto o académicos. Por lo tanto, hay muchos aspectos que están simplificados y no se pone atención a gestión de usuarios y permisos, performance, redundancia, disponibilidad, escalabilidad, etc. y no es apto para producción.
+Ejemplo de solución sencilla de un ambiente autocontenido para prototipado de modelos de Machine Learning en lenguaje Python basada en microservicios con docker-compose.  El foco está en poder ejercitar el proceso completo desde el desarrollo de modelos hasta su puesta en producción con fines didácticos, de prueba de concepto o académicos. Por lo tanto, hay muchos aspectos que están simplificados y no se pone atención a gestión de usuarios y permisos, performance, redundancia, disponibilidad, escalabilidad, etc. y no es apto para producción.
 
 #### Organización de directorios:
 

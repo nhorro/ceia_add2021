@@ -1,0 +1,1 @@
+{"n_neighbors": 10, "weights": "distance", "algorithm": "kd_tree", "leaf_size": 70, "p": 1}

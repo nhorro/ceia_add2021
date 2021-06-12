@@ -1,0 +1,134 @@
+version: '3.7'
+
+services:   
+  influxdb:
+    build:
+        context: ./influxdb
+    volumes:
+         - type: volume
+           source: influxdb.data
+           target: /var/lib/influxdb
+    ports:
+         - "8086:8086/tcp"
+    networks:
+      - mynetwork            
+
+  grafana:
+    build:
+      context: ./grafana
+    volumes:
+      - type: bind
+        source: ./grafana/dashboards/
+        target: /dashboards
+      - type: volume
+        source: grafana.data
+        target: /var/lib/grafana
+      - type: volume
+        source: grafana.log
+        target: /var/log/grafana
+    ports:
+      - target: 3000
+        published: 3000
+        protocol: tcp
+    networks:
+      - mynetwork   
+
+  jupyter:
+    build:
+      context: ./jupyter
+    volumes:
+      - type: bind
+        source: ../notebooks
+        target: /home/jovyan/work
+      - type: bind
+        source: ../data
+        target: /data        
+      - type: bind
+        source: ../models
+        target: /models
+    environment:
+        JUPYTER_ENABLE_LAB: "yes"
+    entrypoint: ["jupyter", "notebook", "--NotebookApp.token=''", "--NotebookApp.password=''", "--notebook-dir=/home/jovyan/work"] #"--allow-root"
+    ports:
+      - target: 8888
+        published: 10000
+        protocol: tcp
+    networks:
+      - mynetwork  
+
+  # Kapacitor UDF
+  kapacitor_udf:
+    build:
+      context: ./kapacitor_udf   
+    volumes:
+      - type: bind
+        source: "/tmp/comm/"
+        target: "/tmp/comm/"
+    networks:
+        - mynetwork     
+
+  # Kapacitor
+  kapacitor:
+    image: kapacitor:latest
+    depends_on:
+        - kapacitor_udf       
+    environment:
+      KAPACITOR_HOSTNAME: kapacitor
+      KAPACITOR_INFLUXDB_0_URLS_0: http://influxdb:8086
+    volumes:
+      - type: volume
+        source: kapacitor.data
+        target: /var/lib/kapacitor
+      - type: bind
+        source: $PWD/kapacitor/kapacitor.conf
+        target: /etc/kapacitor/kapacitor.conf
+      - type: bind
+        source: $PWD/kapacitor/load
+        target: "/root/.kapacitor/load"
+      - type: bind
+        source: "/tmp/comm/"
+        target: "/tmp/comm/" 
+    links:
+      - influxdb
+    ports:
+      - "9092:9092"
+    networks:
+        - mynetwork  
+
+  chronograf:
+    image: chronograf:latest
+    volumes:
+        - type: volume
+          source: chronograf.data
+          target: /var/lib/chronograf
+    ports:
+      - "8888:8888/tcp"   
+    networks:
+        - mynetwork     
+
+  creditfraudmodel:
+    build:
+      context: ./api
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: ../models
+        target: /models        
+    environment:
+        PRODUCTION_MODEL_FILENAME: "production.pkl"
+    networks:
+      - mynetwork           
+
+networks:
+  mynetwork:
+    driver: bridge        
+
+volumes:
+    grafana.data:
+    kapacitor.data:
+    chronograf.data:
+    grafana.log:
+    influxdb.data:

@@ -138,8 +138,13 @@ Docentes: Dra. Magdalena Bouza, Lic. Nicolás Eduardo Horro.
 
 Temario:
 
-- Caso de estudio.
-- Desarrollo y despliegue de un modelo.
+- Introducción a la ingeniería de variables.
+- Caso de estudio:
+  - Ingeniería de features de tiempo y frecuencia.
+  - Desarrollo del modelo completo y exportación.
+- Desarrollo y despliegue de modelos.
+  - Conceptos de SW para armado de cadenas de procesamiento complejas.
+  - Ejemplo de despliegue con microservicios: aplicación de detección de fraude.
 
 ### Clase 8. Evaluación / exposición de trabajos
 

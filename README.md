@@ -148,3 +148,14 @@ Temario:
 
 ### Clase 8. Evaluación / exposición de trabajos
 
+- Links a trabajos en [grupo de slack](https://ceaiworkspace.slack.com/archives/C01VCBS9FV3)
+
+## Recursos de interés
+
+Librerías (aportes de alumn@s recomendados y/o utilizados en TP integrador) que complementan temas vistos en clase:
+
+- [dtale](https://pypi.org/project/dtale/): librería para análisis exploratorio inicial. 
+- [boruta-py](https://github.com/scikit-learn-contrib/boruta_py): implementación scikit-learn de algoritmo Boruta selección de features. 
+- [Imbalanced learn](https://pypi.org/project/imbalanced-learn/): librería para tratamiento de datos desbalanceados: incluye SMOTE, etc. 
+- [Feature engine](https://feature-engine.readthedocs.io/): librería que implementa la mayoría de los métodos de ingeniería de features vistos en la clase 4.
+- [Geopy](https://geopy.readthedocs.io/en/stable/): librería para trabajar con datos geográfico en pythos. 

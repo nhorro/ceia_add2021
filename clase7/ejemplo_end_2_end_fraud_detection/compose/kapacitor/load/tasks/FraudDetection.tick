@@ -1,0 +1,9 @@
+dbrp "my_application"."autogen"
+
+stream
+    |from()
+        .measurement('TMV_CREDIT_OPERATION')
+    @udf_ml_model()
+    |influxDBOut()
+        .database('my_application')
+        .measurement('TMV_CREDIT_OPERATION_RESULT')

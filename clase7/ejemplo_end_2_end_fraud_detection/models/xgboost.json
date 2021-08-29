@@ -1,0 +1,1 @@
+{"boosting": "gblinear", "tree_method": "approx", "max_depth": 14, "reg_alpha": 1, "reg_lambda": 3, "min_child_weight": 2, "gamma": 0, "learning_rate": 0.020262168850806294, "eval_metric": "rmse", "objective": "reg:tweedie", "colsample_bytree": 0.51, "colsample_bynode": 0.35, "colsample_bylevel": 0.67, "subsample": 1.0}

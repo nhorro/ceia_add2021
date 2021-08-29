@@ -1,0 +1,1 @@
+docker run --rm -p 8888:8888 -p 8000:8000 -v "$PWD":/home/jovyan/work jupyter/ceia-data-analysis

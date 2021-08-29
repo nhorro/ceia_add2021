@@ -1,0 +1,2 @@
+function cuartiles_out = cuartiles(X)    cuartiles_out = zeros(3,1);    N = length(X);    % ordeno el vector en forma ascendente para crear estadistica ordenada  X_ordenado  = sort(X);    % calculo el Q1  cuartiles_out(1) = X_ordenado(round(N/4));    % calculo el Q2 - mediana  cuartiles_out(2) = mediana(X);      % calculo el Q3 - mediana  cuartiles_out(3) = X_ordenado(round(3*N/4));  
+endfunction

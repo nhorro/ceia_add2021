@@ -1,0 +1,1 @@
+randn("seed", 1234)% numero de muestrasN = 100;  % vector aleatorio normal N(0,1)  X = randn(N,1);    curtosis_normal = curtosis(X)  oblicuidad_normal = oblicuidad(X)iqr_normal = iqr(X)boxplot(X);  

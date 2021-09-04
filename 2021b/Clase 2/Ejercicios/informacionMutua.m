@@ -1,0 +1,1 @@
+function informacionMutua_out = informacionMutua(p_xy_vector, p_x_vector, p_y_vector)p_xy_vector = reshape(p_xy_vector, [2*length(p_xy_vector),1]);p_x_times_p_y = p_x_vector .* p_y_vector';p_x_times_p_y = reshape(p_x_times_p_y, [2*length(p_x_times_p_y),1]);informacionMutua_out = divergenciaKL(p_xy_vector, p_x_times_p_y);  endfunction

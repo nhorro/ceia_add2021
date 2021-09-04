@@ -1,0 +1,1 @@
+function entropiaCruzada_out = entropiaCruzada(p_vector, q_vector)entropiaCruzada_out = entropia(p_vector) + divergenciaKL(p_vector, q_vector);   endfunction
